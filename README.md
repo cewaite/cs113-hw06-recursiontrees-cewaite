@@ -33,24 +33,25 @@ The two methods will be tested using 5 cent increments between 5 cents and 30 ce
 1. Draw binary expression trees for the following infix expressions.  Your trees should enforce the Java rules for operator evaluation (higher-precedence operators before lower-precedence operators and left associativity.) Note: they should also preserve the order seen in the expressions.
   - `x / y + a - b * c`
 
-  **[//Insert image here//]**
+  ![IMG_20201006_194534](https://user-images.githubusercontent.com/70171720/95282145-ad4c7c00-080d-11eb-9e35-25ace822ef68.jpg)
+
   - `(x * a) - y / b * (c + d)`
   
-  **[//Insert image here//]**
+ ![IMG_20201006_194542](https://user-images.githubusercontent.com/70171720/95282183-bfc6b580-080d-11eb-9cc4-93fd02030344.jpg)
   
   - `(x + (a * (b - c)))/ d`
   
-  **[//Insert image here//]**
+  ![IMG_20201006_194546](https://user-images.githubusercontent.com/70171720/95282203-cbb27780-080d-11eb-9341-6c734fa4c11c.jpg)
   
 2. Using the Huffman tree in the figure below:
 
 ![Image of huffman code tree](doc/problemImages/huffman.png)
 
   - Write the binary string for the message "scissors cuts paper":
-    - Binary String = `insert here`
+    - Binary String = 00110000001100011001110100010001111100000000011101001111110000110101000010100010
   - Decode the following binary string using the tree above:
   `1100010001010001001011101100011111110001101010111101101001`
-    - Decoded String = `insert here`
+    - Decoded String = 'where is waldo'
 
 3. For each of the two trees shown below, answer these questions:
 - What is its height?
@@ -60,35 +61,35 @@ The two methods will be tested using 5 cent increments between 5 cents and 30 ce
 
 ![Image of tree for problem 3A](doc/problemImages/problem3A.png)
 
-`insert answers here`
+![IMG_20201006_194621](https://user-images.githubusercontent.com/70171720/95282255-e258ce80-080d-11eb-860d-720688edac74.jpg)
 
 ![Image of tree for problem 3B](doc/problemImages/problem3B.png)
 
-`insert answers here`
+![IMG_20201006_194624](https://user-images.githubusercontent.com/70171720/95282260-e4bb2880-080d-11eb-94fa-33909c9b1000.jpg)
 
 4. For the binary trees shown below, indicat whether each tree is full, perfect, complete, or none of the above (note that a tree could be more than one of these!)
 
 ![Image of tree for problem 4A](doc/problemImages/problem4A.png)
 
-`insert answers here`
+The given tree is only complete, as all but the last level are completely full. It is not full because 'cat' only has one child, not two. Its not perfect because 'wolf' has no children and 'cat' has only one child.
 
 ![Image of tree for problem 4B](doc/problemImages/problem4B.png)
 
-`insert answers here`
+The given tree is full and complete
 
 ![Image of tree for problem 4C](doc/problemImages/problem4C.png)
 
-`insert answers here`
+The given tree is full
 
 ![Image of tree for problem 4A](doc/problemImages/huffman.png)
 
-`insert answers here`
+The given tree is full
 
 5. Represent the general tree below as a binary tree
 
 ![Image of general tree for problem 5](doc/problemImages/problem5-general.png)
 
-**[//Insert image here//]**
+![IMG_20201006_194636](https://user-images.githubusercontent.com/70171720/95282383-29df5a80-080e-11eb-9a2a-739beb4263f6.jpg)
 
 
 ----------
