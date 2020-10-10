@@ -25,7 +25,7 @@ public class ChangeCalculator {
             counts.add(0);
         }
 //        System.out.println(calculateChange(counts, 0, 75));
-        printCombinationsToFile(counts, 75);
+        printCombinationsToFile(75);
     }
 
     /**
@@ -211,7 +211,18 @@ public class ChangeCalculator {
 //        return numOfCombos;
 //    }
 
-    public static int calculateChange(LinkedList<Integer> counts, int index, int cents)
+    public static int calculateChange(int cents)
+    {
+        LinkedList<Integer> counts = new LinkedList<>();
+        for (int i = 0; i < 4; i++)
+        {
+            counts.add(0);
+        }
+
+        return innerCalculateChange(counts, 0, cents);
+    }
+
+    public static int innerCalculateChange(LinkedList<Integer> counts, int index, int cents)
     {
         LinkedList<Integer> coins = new LinkedList<>();
         coins.add(25);
@@ -247,7 +258,7 @@ public class ChangeCalculator {
             if ((cents % coins.get(index)) == 0)
             {
                 counts.set(index, cents / coins.get(index));
-                numOfCombos += calculateChange(counts, index + 1, 0);
+                numOfCombos += innerCalculateChange(counts, index + 1, 0);
             }
         }
         else
@@ -255,7 +266,7 @@ public class ChangeCalculator {
             for (int i = 0; i <= cents / coins.get(index); i++)
             {
                 counts.set(index, i);
-                numOfCombos += calculateChange(counts, index + 1, cents - (coins.get(index) * i));
+                numOfCombos += innerCalculateChange(counts, index + 1, cents - (coins.get(index) * i));
             }
         }
 
@@ -271,7 +282,7 @@ public class ChangeCalculator {
      *
      * @param cents a monetary value in cents
      */
-    public static void printCombinationsToFile(LinkedList<Integer> counts, int cents) {
+    public static void printCombinationsToFile(int cents) {
         // TODO:
         // This when calculateChange is complete. Note that the text file must be created within this directory.
         try
@@ -279,7 +290,7 @@ public class ChangeCalculator {
             PrintStream o = new PrintStream("src/edu.miracosta.cs113/change/CoinCombinations.txt");
             PrintStream console = System.out;
             System.setOut(o);
-            calculateChange(counts, 0, cents);
+            calculateChange(cents);
         } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
